@@ -1,20 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>cifrandoApp</title>
+	<link rel="icon" type="png/image" href="img/key.png">
 	<link rel="stylesheet" type="text/css" href="bower_components/materialize/dist/css/materialize.min.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
-<body>
-<fieldset> <legend>Seleccione Una Opción</legend>
-	<input id="radioCifrar" type="radio" name="rbOpcion" value="Cifrar" checked="true"> <label for="radioCifrar">Cifrar</label>
-	<input id="radioDescifrar" type="radio" name="rbOpcion" value="Descifrar"> <label for="radioDescifrar">Descifrar</label>
-</fieldset>
-<br>
-<label for="textareaCifrar">Texto Descifrado</label>
-<textarea class="materialize-textarea" id="textareaCifrar">Lorem ipsum dolor sit amet</textarea>
-<label for="textareaDescifrar">Texto Cifrado</label>
-<textarea class="materialize-textarea" id="textareaDescifrar"></textarea>
-<button class="btn waves-effect" id="btnConvertir">Convertir</button>
+<body bgcolor="#eee">
+	<div>
+		<div class="row">
+			<div class="col s8 offset-s2">
+				<div class="card-panel">
+					<div class="row">
+					<h4><i class="material-icons">vpn_key</i> cifrandoApp</h4>
+					<div class="divider"></div>
+						<!-- <fieldset> <legend>Seleccione Una Opción</legend>
+						<input id="radioCifrar" type="radio" name="rbOpcion" value="Cifrar" checked="true"> <label for="radioCifrar">Cifrar</label>
+						<input id="radioDescifrar" type="radio" name="rbOpcion" value="Descifrar"> <label for="radioDescifrar">Descifrar</label>
+						</fieldset> -->
+						<div class="input-field col s6">
+							<textarea class="materialize-textarea" id="textareaCifrar"></textarea>
+							<label for="textareaCifrar">Texto Plano</label>
+						</div>
+						<div class="input-field col s6">
+							<textarea class="materialize-textarea" id="textareaDescifrar"></textarea>
+							<label for="textareaDescifrar">Texto Cifrado</label>
+						</div>
+						<div class="">
+							<div class="switch">
+    							<label>
+    							  Cifrar
+    							  <input type="checkbox" id="chkCifrar">
+    							  <span class="lever"></span>
+    							  Descifrar
+   								</label>
+  							</div>
+  							<div class="right">
+								<button class="btn waves-effect" id="btnConvertir">Convertir</button>			
+							</div>
+						</div>	
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
 <!-- Scripts -->
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/materialize/dist/js/materialize.min.js"></script>

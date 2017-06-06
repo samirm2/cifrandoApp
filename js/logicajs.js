@@ -1,9 +1,8 @@
 $(function(){
 	var estado = true; //Si es TRUE Cifrara, de lo contrario DESCIFRARA
 	$("#textareaDescifrar").attr("readonly",true);
-
-	$("[name=rbOpcion]").change(function(){
-		if ($(this).val() == "Cifrar") {
+	$("#chkCifrar").change(function(){
+		if(!$(this).is(":checked")){
 			estado = true;
 			$("#textareaDescifrar").attr("readonly",true);
 			$("#textareaCifrar").attr("readonly",false);
@@ -13,6 +12,7 @@ $(function(){
 			$("#textareaDescifrar").attr("readonly",false);
 		}
 	});
+	
 	$("#btnConvertir").click(function(){
 		if (estado) {
 			var textoPlano = $("#textareaCifrar").val();
@@ -23,5 +23,6 @@ $(function(){
 			var textoPlano = window.atob(textoCifrado);
 			$("#textareaCifrar").val(textoPlano);
 		}
+		Materialize.updateTextFields();
 	});
 });
